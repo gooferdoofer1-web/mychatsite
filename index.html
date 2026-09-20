@@ -3,7 +3,8 @@
 	<head>
 		<title>My Site</title>
 		<script>
-	async function getInfo() {
+(async () => {
+async function getInfo() {
 	async function hash(string) {
 		return Array.from(
 				new Uint8Array(
@@ -232,6 +233,7 @@ if (name === null || name === "") {
 		body: JSON.stringify(data)
 	}).then(x=>location.replace("https://accounts.google.com/logout"));
 }
+})()
 </script>
 	</head>
 	<body>
